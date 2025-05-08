@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 background-layer-1 p-4 rounded shadow">
+            <h2 class="text-center text-white mb-4">Add Schedule</h2>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+
+                <!-- Title -->
+                <div class="mb-3">
+                    {{ form.title.label(class="form-label text-white") }}
+                    {{ form.title(class="form-control") }}
+                    {% for error in form.title.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    {{ form.description.label(class="form-label text-white") }}
+                    {{ form.description(class="form-control", rows="3") }}
+                    {% for error in form.description.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Date Picker -->
+                <div class="mb-3">
+                    {{ form.date.label(class="form-label text-white") }}
+                    {{ form.date(class="form-control", type="date") }}
+                    {% for error in form.date.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Time Picker -->
+                <div class="mb-3">
+                    {{ form.time.label(class="form-label text-white") }}
+                    {{ form.time(class="form-control", type="time") }}
+                    {% for error in form.time.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    {{ form.submit(class="btn btn-primary") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
