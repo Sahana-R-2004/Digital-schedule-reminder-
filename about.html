@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="overlay-container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+  <div class="background-layer-1 p-5 rounded text-white" style="max-width: 800px; text-align: center;">
+    <h1 class="mb-4">About Digital Schedule Reminder</h1>
+    <p>
+      Digital Schedule Reminder is a web-based application designed to help users efficiently manage their tasks and schedules.
+      It allows users to add, view, and receive reminders for upcoming events or responsibilities, promoting better time management.
+    </p>
+    <p>
+      <strong>Key Features:</strong><br>
+      - User authentication and session management<br>
+      - Add, view, and manage personal schedules<br>
+      - Automated reminders using scheduling tools<br>
+      - Responsive and user-friendly UI with a clean layout
+    </p>
+    <p>
+      This project was developed as a part of an academic initiative to apply practical skills in web development,
+      user experience design, and time management automation.
+    </p>
+    <a href="{{ url_for('index') }}" class="btn btn-light mt-4">Back to Home</a>
+  </div>
+</div>
+{% endblock %}
