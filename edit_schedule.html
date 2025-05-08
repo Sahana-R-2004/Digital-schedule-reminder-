@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="text-warning text-center mb-4">Edit Schedule</h2>
+    <form method="POST" class="bg-dark text-light p-4 rounded shadow-sm border border-warning">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.title.label(class="form-label text-warning") }}
+            {{ form.title(class="form-control bg-dark text-light border-warning") }}
+        </div>
+
+
+        <div class="mb-3">
+            {{ form.date.label(class="form-label text-warning") }}
+            {{ form.date(class="form-control bg-dark text-light border-warning") }}
+        </div>
+
+
+        <div class="mb-3">
+            {{ form.time.label(class="form-label text-warning") }}
+            {{ form.time(class="form-control bg-dark text-light border-warning") }}
+        </div>
+
+
+        <div class="mb-3">
+            {{ form.description.label(class="form-label text-warning") }}
+            {{ form.description(class="form-control bg-dark text-light border-warning", rows="3") }}
+        </div>
+
+
+        <div class="text-center">
+            {{ form.submit(class="btn btn-warning px-4") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
