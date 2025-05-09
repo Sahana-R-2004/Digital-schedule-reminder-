@@ -1,0 +1,119 @@
+/* Custom CSS */
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Background Layer Styling */
+.overlay-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/static/websiteimage11.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Layer styling for better readability */
+.background-layer-1 {
+    background-color: rgba(0, 0, 0, 0.5);  /* Lighter overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.background-layer-2 {
+    background-color: rgba(0, 0, 0, 0.4);  /* Slightly more transparent overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+    padding: 15px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Text Layer for Home and View Schedule Pages */
+.background-layer-1, .background-layer-2 {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Animations */
+.overlay-container h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.overlay-container p {
+    font-size: 1.5rem;
+}
+
+/* Animations for Visibility */
+.overlay-container h1 {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s forwards;
+}
+
+.overlay-container p {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+/* Keyframes for animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overlay-container h1 {
+        font-size: 3rem;
+    }
+
+    .overlay-container p {
+        font-size: 1.2rem;
+    }
+}
